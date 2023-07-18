@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- Hayami -->
 <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -46,7 +45,6 @@
 </svg>
 
 <main>
-
   <header class="p-3 bg-dark text-white">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -55,10 +53,10 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="./shop.html" class="nav-link px-2 text-white">Shop</a></li>
+          <li><a href="./shop.html" class="nav-link px-2 text-secondary">Shop</a></li>
           <li><a href="#" class="nav-link px-2 text-white">History</a></li>
           <li><a href="#" class="nav-link px-2 text-white">Account</a></li>
-          <li><a href="./index.html" class="nav-link px-2 text-secondary">Setting</a></li>
+          <li><a href="./index.html" class="nav-link px-2 text-white">Setting</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -71,12 +69,11 @@
       </div>
     </div>
   </header>
+</main>
 <div class="container">
   <br>
-  <input class="btn btn-primary btn-sm" type="button" value="商品データ取得" onclick="get_all_items()">
-  <input class="btn btn-primary btn-sm" type="button" value="商品データリセット" onclick="reset_item_db()">
-  <input class="btn btn-primary btn-sm" type="button" value="商品データ全削除" onclick="delete_all_items()">
-  <h1 class="my-3 ml-3">Setting</h1>
+  <input class="btn btn-primary btn-sm" type="button" value="商品データ取得" onclick="buy_item()">
+  <h1 class="my-3 ml-3">SHOP</h1>
   <div class="col table-responsive">
       <table class="table table-container table-striped table-hover" id="table_id">
           <thead>
@@ -91,45 +88,12 @@
                 <th>在庫</th>
                 <th>作成日</th>
                 <th>更新日</th>
-                <th>更新</th>
-                <th>削除</th>
+                <th>購入</th>
               </tr>
           </thead>
       </table>
-      <h1 class="my-3 ml-3">Add item</h1>
-          <table class="table table-container table-striped table-hover">
-              <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>商品名</th>
-                    <th>カテゴリー</th>
-                    <th>生産</th>
-                    <th>価格</th>
-                    <th>画像</th>
-                    <th>説明</th>
-                    <th>在庫</th>
-                  </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>#</td>
-                  <td><input type="text" value="商品名" id="add_name"></td>
-                  <td><input type="text" value="カテゴリー" id="add_category"></td>
-                  <td><input type="text" value="生産" id="add_manufacturer"></td>
-                  <td><input type="number" value="0" min="0" step="1" id="add_price"></td>
-                  <td><input type="text" value="画像" id="add_image_path"></td>
-                  <td><input type="text" value="説明" id="add_description"></td>
-                  <td><input type="number" value="0" min="0" step="1" id="add_stock"></td>
-                </tr>
-              </tbody>
-          </table>
-          <input class="btn btn-primary btn-sm" type="button" value="商品追加" onclick="add_item()">
-        
 
   </div>
-</div>
-</main>
-
       
   </body>
 </html>
